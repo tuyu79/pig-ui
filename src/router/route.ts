@@ -77,6 +77,20 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 		},
 	},
 	{
+		path: '/solitaire',
+		name: 'router.solitaire',
+		component: () => import('/@/views/solitaire/index.vue'),
+		meta: {
+			isLink: '',
+			isHide: false,
+			isKeepAlive: true,
+			isAffix: false,
+			isIframe: false,
+			icon: 'ele-CreditCard',
+			title: '纸牌游戏',
+		},
+	},
+	{
 		path: '/personal',
 		name: 'router.personal',
 		component: () => import('/@/views/admin/user/personal.vue'),
