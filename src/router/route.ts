@@ -63,10 +63,33 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 		},
 	},
 	{
+		path: '/resume',
+		name: 'router.resume',
+		component: () => import('/@/views/resume/index.vue'),
+		meta: {
+			isLink: '',
+			isHide: false,
+			isKeepAlive: true,
+			isAffix: false,
+			isIframe: false,
+			icon: 'ele-User',
+			title: '简历管理',
+		},
+	},
+	{
 		path: '/personal',
 		name: 'router.personal',
 		component: () => import('/@/views/admin/user/personal.vue'),
 		meta: {
+			isHide: true,
+		},
+	},
+	{
+		path: '/resume/share/:id',
+		name: 'router.resumeShare',
+		component: () => import('/@/views/resume/share.vue'),
+		meta: {
+			isAuth: false,
 			isHide: true,
 		},
 	},
