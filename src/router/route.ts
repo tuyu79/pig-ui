@@ -49,6 +49,20 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 		},
 	},
 	{
+		path: '/it-tools',
+		name: 'router.itTools',
+		component: () => import('/@/views/it-tools/index.vue'),
+		meta: {
+			isLink: '',
+			isHide: false,
+			isKeepAlive: true,
+			isAffix: false,
+			isIframe: false,
+			icon: 'ele-Tools',
+			title: 'IT 工具',
+		},
+	},
+	{
 		path: '/personal',
 		name: 'router.personal',
 		component: () => import('/@/views/admin/user/personal.vue'),
